@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="0dp"
+    card_view:cardUseCompatPadding="false"
+    card_view:cardElevation="0dp"
+    android:layout_marginBottom="16dp"
+    card_view:cardBackgroundColor="#FFFFFF">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/menu_item_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:text="0 000"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_horizontal"
+            android:paddingBottom="1sp" />
+
+        <TextView
+            android:id="@+id/menu_item_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:text="NAME"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center_horizontal"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="11sp"
+            />
+
+        <ImageView
+            android:id="@+id/menu_item_picture"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/action_settings"
+            android:src="@mipmap/ic_launcher_round"
+            android:scaleType="fitCenter"
+            android:paddingBottom="24sp" />
+
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Anekdots 200k</string>
+    <string name="initDB">Распаковка БД</string>
+    <string name="readCensorDB">Читаем БД цензуры</string>
+    <string name="readThemesDB">Читаем БД категорий</string>
+    <string name="updateThemesDB">Обновляем данные категорий</string>
+    <string name="errorTitle">Возникла ошибочка</string>
+    <string name="errorFreeSpace">К сожалению, на накопителе нет достаточно свободного пространства. Необходимо не менее 100МБ для разворачивания базы...</string>
+    <string name="title_activity_menu">MenuActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+</resources>
