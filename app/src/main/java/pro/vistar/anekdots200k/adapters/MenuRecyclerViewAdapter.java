@@ -12,14 +12,32 @@ import pro.vistar.anekdots200k.R;
 import pro.vistar.anekdots200k.data.sqlite.entity.ThemeEntity;
 import pro.vistar.anekdots200k.holders.MenuRecyclerViewHolder;
 
-public class MenuRecyclerViewAdapter  extends RecyclerView.Adapter<MenuRecyclerViewHolder> {
+public class MenuRecyclerViewAdapter extends RecyclerView.Adapter<MenuRecyclerViewHolder> {
 
     private List<ThemeEntity> itemList;
     private Context context;
+    private int nameFontSize = 16;
+    private int countFontSize = 10;
 
     public MenuRecyclerViewAdapter(Context context, List<ThemeEntity> itemList) {
         this.itemList = itemList;
         this.context = context;
+    }
+
+    /**
+     * Set font size for chapter name
+     * @param nameFontSize - font size for chapter name
+     */
+    public void setNameFontSize(int nameFontSize) {
+        this.nameFontSize = nameFontSize;
+    }
+
+    /**
+     * Set font size for count in chapter
+     * @param countFontSize - font size for count
+     */
+    public void setCountFontSize(int countFontSize) {
+        this.countFontSize = countFontSize;
     }
 
     @Override
@@ -33,7 +51,11 @@ public class MenuRecyclerViewAdapter  extends RecyclerView.Adapter<MenuRecyclerV
     @Override
     public void onBindViewHolder(MenuRecyclerViewHolder holder, int position) {
         holder.menuItemName.setText(itemList.get(position).getShortname());
+        holder.menuItemName.setTextSize(this.nameFontSize);
+
         holder.menuItemCount.setText(String.valueOf(itemList.get(position).getCnt()));
+        holder.menuItemCount.setTextSize(this.countFontSize);
+
         //holder.menuItemPicture.setImageResource(itemList.get(position).);
         holder.menuItemPicture.setImageResource(R.mipmap.ic_launcher_round);
     }

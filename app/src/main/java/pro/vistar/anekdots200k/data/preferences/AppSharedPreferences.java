@@ -47,6 +47,11 @@ public class AppSharedPreferences {
     public static final String PORTRAIT_MENU_FONT_SIZE = "portraitMenuFontSize";
     /**
      * Key name in preferences
+     * Save menu count for chapter font size by user in app options
+     */
+    public static final String PORTRAIT_MENU_COUNT_FONT_SIZE = "portraitMenuCountFontSize";
+    /**
+     * Key name in preferences
      * Save menu count columns by user in app options
      */
     public static final String ALBUM_MENU_COLUMNS = "albumMenuColumns";
@@ -55,6 +60,11 @@ public class AppSharedPreferences {
      * Save menu chapter font size by user in app options
      */
     public static final String ALBUM_MENU_FONT_SIZE = "albumMenuFontSize";
+    /**
+     * Key name in preferences
+     * Save menu count for chapter font size by user in app options
+     */
+    public static final String ALBUM_MENU_COUNT_FONT_SIZE = "albumMenuCountFontSize";
 
     private SharedPreferences sharedPreferences;
     private SharedPreferences.Editor preferencesEditor;
@@ -94,6 +104,17 @@ public class AppSharedPreferences {
      */
     public int getIntSetting(String settingName) {
         return sharedPreferences.getInt(settingName, 0);
+    }
+
+    /**
+     * Get integer value by settings key name
+     *
+     * @param settingName
+     * @param defvalue
+     * @return integer value or defvalue
+     */
+    public int getIntSetting(String settingName, int defvalue) {
+        return sharedPreferences.getInt(settingName, defvalue);
     }
 
     /**

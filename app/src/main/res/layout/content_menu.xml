@@ -12,16 +12,45 @@
         android:minHeight="?attr/actionBarSize" />
 
     <RelativeLayout
+        android:id="@+id/menuWrapper"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="8dp"
         tools:context=".MainActivity">
 
+        <RelativeLayout
+            android:id="@+id/topAd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Button" />
+        </RelativeLayout>
+
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recycler_view"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/bottomAd"
+            android:layout_below="@+id/topAd"
             android:scrollbars="vertical" />
+
+        <RelativeLayout
+            android:id="@+id/bottomAd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Button" />
+        </RelativeLayout>
+
 
     </RelativeLayout>
 
